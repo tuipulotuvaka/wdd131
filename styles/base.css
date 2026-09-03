@@ -1,11 +1,21 @@
+/* /* =========================================
+   WDD 131 - W01 HOME PAGE
+========================================= */
+
 :root {
-  --primary-color: #003b5c;
-  --secondary-color: #005f73;
-  --accent-color: #ee9b00;
-  --background-color: #f4f4f4;
-  --text-color: #222;
+  --primary-color: #1f5278;
+  --secondary-color: #174765;
+  --accent-color: #f5d000;
+  --background-color: #ffffff;
+  --text-color: #222222;
+  --border-color: #cccccc;
+  --link-color: #0000ee;
   --white: #ffffff;
 }
+
+/* =========================================
+   GLOBAL
+========================================= */
 
 * {
   box-sizing: border-box;
@@ -13,10 +23,15 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   color: var(--text-color);
   background-color: var(--background-color);
+  line-height: 1.6;
 }
+
+/* =========================================
+   HEADER
+========================================= */
 
 header {
   background-color: var(--primary-color);
@@ -26,93 +41,218 @@ header {
 #course-title {
   display: block;
   text-align: center;
-  padding: 25px 10px;
-  font-family: 'Roboto Slab', serif;
-  font-size: 1.8rem;
+  padding: 20px 10px;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: 1.7rem;
   font-weight: 700;
 }
+
+/* =========================================
+   NAVIGATION
+========================================= */
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
+  gap: 10px;
 }
 
 nav a {
+  display: block;
   color: var(--white);
   text-decoration: none;
-  padding: 15px 20px;
   font-weight: 700;
-  transition: background-color 0.3s, color 0.3s;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   background-color: var(--accent-color);
-  color: #000;
+  color: #000000;
 }
+
+/* =========================================
+   MAIN
+========================================= */
 
 main {
-  max-width: 1000px;
+  max-width: 1250px;
   margin: 30px auto;
   padding: 0 20px;
 }
 
 h1 {
+  margin: 15px 0 30px;
   text-align: center;
-  font-family: 'Roboto Slab', serif;
-  color: var(--primary-color);
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: 2.6rem;
+  color: #222222;
 }
 
-.card {
+/* =========================================
+   TWO COLUMN PAGE
+========================================= */
+
+.content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 20px;
-  background-color: var(--white);
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: start;
 }
 
-.card h2 {
-  grid-column: 1 / -1;
-  text-align: center;
+/* =========================================
+   CARDS
+========================================= */
+
+.about-card,
+.resources-card {
+  background-color: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-card > h2,
+.resources-card > h2 {
+  margin: 0;
+  padding: 12px;
   background-color: var(--primary-color);
   color: var(--white);
-  padding: 10px;
-  margin: 0;
-  border-radius: 5px;
+  text-align: center;
+  font-size: 1.35rem;
 }
 
-.card img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+/* =========================================
+   ABOUT ME
+========================================= */
+
+.about-content {
+  padding: 20px 22px;
+  min-height: 300px;
+}
+
+.profile {
+  float: right;
+  width: 165px;
+  height: 220px;
+  object-fit: cover;
+  margin: 0 0 15px 25px;
+  border: 1px solid #999999;
+  border-radius: 4px;
+}
+
+.about-content p {
+  margin-top: 5px;
+  font-size: 1.05rem;
+}
+
+/* =========================================
+   TONGA
+========================================= */
+
+.tonga-section {
+  clear: both;
+  padding: 0 22px 25px;
+}
+
+.tonga-section h2 {
+  margin: 10px 0 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--border-color);
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.tonga-content {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.flag-container {
+  text-align: center;
+}
+
+.tonga-flag {
   display: block;
-  margin: auto;
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 1px solid #999999;
+  border-radius: 4px;
 }
 
-.card p {
-  line-height: 1.6;
+.caption {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
 }
+
+.tonga-content > p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* =========================================
+   WEB DEVELOPMENT RESOURCES
+========================================= */
+
+.resources-card ul {
+  margin: 30px 0;
+  padding-left: 45px;
+}
+
+.resources-card li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.resources-card a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.resources-card a:hover,
+.resources-card a:focus {
+  color: var(--secondary-color);
+  background-color: #f5f5f5;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
-  text-align: center;
+  margin-top: 25px;
+  padding: 20px;
   background-color: var(--primary-color);
   color: var(--white);
-  padding: 20px;
-  margin-top: 30px;
+  text-align: center;
 }
 
 footer p {
-  margin: 8px;
+  margin: 5px;
 }
 
-@media (max-width: 600px) {
+#lastModified {
+  color: #ffff00;
+  font-weight: 500;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 700px) {
+
   nav {
     flex-direction: column;
+    gap: 0;
   }
 
   nav a {
@@ -120,7 +260,34 @@ footer p {
     text-align: center;
   }
 
-  .card {
+  .content-grid {
     grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    min-height: auto;
+  }
+
+  .profile {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .tonga-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .resources-card {
+    min-height: auto;
+  }
+
+  .resources-card ul {
+    margin: 30px 0;
   }
 }
