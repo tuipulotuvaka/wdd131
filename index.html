@@ -1,218 +1,186 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WDD 131 – Dynamic Web Fundamentals – Lea Mei Vaka Tu'ipulotu</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Lea Mei Vaka Tuipulotu</title>
 
-  <meta name="description"
-    content="WDD 131 Dynamic Web Fundamentals home page for Lea Mei Vaka Tu'ipulotu, a student from Tonga interested in web development, rugby, and leadership.">
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals course home page for Lea Mei Vaka Tuipulotu, featuring information about me, Tonga, web development resources, and course links.">
 
-  <meta name="author" content="Lea Mei Vaka Tu'ipulotu">
+    <meta name="author" content="Lea Mei Vaka Tuipulotu">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/base.css">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap"
-    rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/base.css">
-
-  <!-- JavaScript -->
-  <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
 
-  <header>
+    <header>
+        <span id="course-title">
+            WDD 131 – Dynamic Web Fundamentals
+        </span>
 
-    <div id="course-title">
-      WDD 131 – Dynamic Web Fundamentals
-    </div>
+        <nav>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
 
-    <nav aria-label="Main navigation">
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">
+                Canvas
+            </a>
 
-      <a href="https://www.linkedin.com/"
-        target="_blank"
-        rel="noopener noreferrer">
-        LinkedIn
-      </a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"
+                target="_blank" rel="noopener noreferrer">
+                Scripture
+            </a>
 
-      <a href="https://byupw.instructure.com/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Canvas
-      </a>
+            <a href="#">
+                Final Project
+            </a>
+        </nav>
+    </header>
 
-      <a href="https://www.churchofjesuschrist.org/study/scriptures"
-        target="_blank"
-        rel="noopener noreferrer">
-        Scripture
-      </a>
 
-      <a href="#">
-        Final Project
-      </a>
+    <main>
 
-    </nav>
+        <h1>Lea Mei Vaka Tuipulotu</h1>
 
-  </header>
+        <div class="cards">
 
-  <main>
+            <section class="card about-card">
 
-    <h1>Lea Mei Vaka Tu'ipulotu</h1>
+                <h2>About Me</h2>
 
-    <div class="content-grid">
+                <div class="about-content">
 
-      <!-- ABOUT ME CARD -->
-      <section class="about-card">
+                    <div class="about-text">
+                        <p>
+                            My name is Lea Mei Vaka Tuipulotu. I am from
+                            Tonga and I am currently studying at BYU-Pathway
+                            Worldwide. I am learning web development and
+                            enjoying the opportunity to improve my skills
+                            in HTML, CSS, and JavaScript.
+                        </p>
 
-        <h2>About Me</h2>
+                        <p>
+                            I enjoy spending time with my family, learning
+                            new things, and developing skills that can help
+                            me in the future. I am excited to learn more
+                            about creating websites and making them useful
+                            and accessible for everyone.
+                        </p>
+                    </div>
 
-        <div class="about-content">
+                    <img
+                        src="images/profile.jpg"
+                        alt="Photo of Lea Mei Vaka Tuipulotu"
+                        width="180"
+                        height="220"
+                    >
 
-          <img
-            class="profile"
-            src="images/profile.jpg"
-            alt="Portrait of Lea Mei Vaka Tu'ipulotu"
-            width="200"
-            height="250">
+                </div>
 
-          <p>
-            Hello! My name is Lea Mei Vaka Tu'ipulotu and I am from Tonga.
-            I am a student at Saineha High School. I enjoy playing rugby and
-            taking on leadership responsibilities as a prefect. I also enjoy
-            learning new skills, especially in technology and web development.
-            This course is helping me understand how to create websites and
-            improve my digital skills.
-          </p>
 
-          <p>
-            I am interested in learning more about HTML, CSS, and JavaScript.
-            My goal is to become more confident in creating websites and using
-            technology to solve problems. I enjoy learning through practice
-            and improving my work each week.
-          </p>
+                <h3>Tonga</h3>
+
+                <div class="country-content">
+
+                    <figure>
+                        <img
+                            src="images/tonga.jpg"
+                            alt="Official flag of Tonga"
+                            width="190"
+                            height="115"
+                        >
+
+                        <figcaption>
+                            Official Flag of Tonga
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        Tonga is a beautiful island country in the South
+                        Pacific Ocean. It is made up of many islands and is
+                        known for its beautiful beaches, ocean, culture, and
+                        strong traditions. Tonga has a rich history and
+                        beautiful natural environments. The people of Tonga
+                        are known for their hospitality and strong family
+                        values.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="card resources-card">
+
+                <h2>Web Dev Resources</h2>
+
+                <ul>
+                    <li>
+                        <a href="https://developer.mozilla.org/"
+                            target="_blank" rel="noopener noreferrer">
+                            MDN Web Docs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.w3schools.com/"
+                            target="_blank" rel="noopener noreferrer">
+                            W3 Schools
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://css-tricks.com/"
+                            target="_blank" rel="noopener noreferrer">
+                            CSS Tricks
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.freecodecamp.org/"
+                            target="_blank" rel="noopener noreferrer">
+                            freeCodeCamp
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.udemy.com/"
+                            target="_blank" rel="noopener noreferrer">
+                            Udemy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.lipsum.com/"
+                            target="_blank" rel="noopener noreferrer">
+                            Lorem Ipsum
+                        </a>
+                    </li>
+                </ul>
+
+            </section>
 
         </div>
 
-        <!-- TONGA SECTION -->
-        <div class="tonga-section">
-
-          <h2>Tonga</h2>
-
-          <div class="tonga-content">
-
-            <div class="flag-container">
-
-              <img
-                class="tonga-flag"
-                src="images/tonga.jpg"
-                alt="Beautiful coastal landscape in Tonga"
-                width="180"
-                height="120">
-
-              <p class="caption">
-                <em>Beautiful Tonga</em>
-              </p>
-
-            </div>
-
-            <p>
-              Tonga is a beautiful island country in the South Pacific Ocean.
-              It is known for its rich Polynesian culture, beautiful islands,
-              strong traditions, and friendly people. Tonga has a unique
-              history and culture that I am proud to be part of. Rugby is also
-              an important part of life in Tonga, and I enjoy playing the sport
-              and representing my country.
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
+    </main>
 
 
-      <!-- WEB DEVELOPMENT RESOURCES CARD -->
-      <section class="resources-card">
+    <footer>
 
-        <h2>Web Dev Resources</h2>
+        <p>
+            © <span id="currentyear"></span>
+            Lea Mei Vaka Tuipulotu | Tonga
+        </p>
 
-        <ul>
+        <p id="lastModified"></p>
 
-          <li>
-            <a href="https://dev.to/"
-              target="_blank"
-              rel="noopener noreferrer">
-              Dev.to Community
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.smashingmagazine.com/"
-              target="_blank"
-              rel="noopener noreferrer">
-              Smashing Magazine
-            </a>
-          </li>
-
-          <li>
-            <a href="https://css-tricks.com/"
-              target="_blank"
-              rel="noopener noreferrer">
-              CSS Tricks
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.w3schools.com/"
-              target="_blank"
-              rel="noopener noreferrer">
-              W3Schools
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.udemy.com/"
-              target="_blank"
-              rel="noopener noreferrer">
-              Udemy
-            </a>
-          </li>
-
-          <li>
-            <a href="https://picsum.photos/"
-              target="_blank"
-              rel="noopener noreferrer">
-              Lorem Picsum Image Placeholder
-            </a>
-          </li>
-
-        </ul>
-
-      </section>
-
-    </div>
-
-  </main>
-
-  <footer>
-
-    <p>
-      &copy;
-      <span id="currentyear"></span>
-      🌺 Lea Mei Vaka Tu'ipulotu 🌺 Tonga
-    </p>
-
-    <p id="lastModified"></p>
-
-  </footer>
+    </footer>
 
 </body>
 </html>
