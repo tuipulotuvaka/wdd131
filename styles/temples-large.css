@@ -1,0 +1,62 @@
+@media screen and (min-width: 700px) {
+
+.header-content {
+    padding: 1rem 2rem;
+}
+
+.header-content span {
+    font-size: 2rem;
+}
+
+#menu-button {
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+nav a {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.7rem 1rem;
+    margin-left: 0.25rem;
+    border-radius: 4px;
+}
+
+main {
+    padding: 3rem 2rem;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.temple-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+figure img {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+}
+
+@media screen and (min-width: 1000px) {
+
+.temple-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+main h1 {
+    font-size: 2.75rem;
+}
+
+}
