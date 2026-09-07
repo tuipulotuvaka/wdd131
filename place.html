@@ -20,6 +20,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles/place.css">
+
     <script src="scripts/place.js" defer></script>
 </head>
 
@@ -29,7 +30,7 @@
         <div class="header-container">
 
             <div class="brand">
-                <div class="flag" aria-label="Tonga flag">✚</div>
+                <div class="flag">✚</div>
                 <h1>Tonga</h1>
             </div>
 
@@ -38,7 +39,7 @@
                 <a href="index.html">Rafting Website</a>
             </nav>
 
-            <button class="menu-button" aria-label="Open navigation menu">
+            <button type="button" class="menu-button" aria-label="Open navigation menu">
                 ☰
             </button>
 
@@ -50,10 +51,12 @@
         <section class="hero">
 
             <picture>
-                <source media="(min-width: 700px)"
+                <source
+                    media="(min-width: 700px)"
                     srcset="images/tonga-large.webp">
 
-                <img src="images/tonga-small.webp"
+                <img
+                    src="images/tonga-small.webp"
                     alt="Beautiful tropical coastline and clear blue water in Tonga">
             </picture>
 
@@ -107,7 +110,7 @@
                     <div class="data-row">
                         <span class="data-icon" aria-hidden="true">💬</span>
                         <strong>Language:</strong>
-                        <span>Tongan & English</span>
+                        <span>Tongan &amp; English</span>
                     </div>
 
                 </div>
@@ -119,7 +122,8 @@
                 <h2>Weather</h2>
 
                 <div class="mobile-weather-icon">
-                    <img src="images/weather.svg"
+                    <img
+                        src="images/weather.svg"
                         alt="Partly cloudy weather">
                 </div>
 
