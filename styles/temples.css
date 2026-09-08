@@ -43,11 +43,16 @@ font-weight: 700;
 
 #menu-button {
 border: none;
-background-color: var(--primary-color);
+background: transparent;
 color: var(--white-color);
 font-size: 2rem;
 cursor: pointer;
 padding: 0.25rem 0.5rem;
+}
+
+#menu-button:hover {
+background-color: var(--secondary-color);
+border-radius: 4px;
 }
 
 nav {
@@ -76,9 +81,11 @@ background-color: var(--secondary-color);
 color: var(--white-color);
 }
 
-nav a.active {
-background-color: var(--accent-color);
+nav a:focus {
+background-color: var(--secondary-color);
 color: var(--white-color);
+outline: 2px solid var(--white-color);
+outline-offset: -2px;
 }
 
 main {
