@@ -15,7 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles/base.css">
@@ -28,7 +29,11 @@
     <header>
         <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
 
-        <nav>
+        <button id="menu-button" aria-label="Open navigation menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="main-nav">
             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
                 LinkedIn
             </a>
@@ -54,7 +59,6 @@
 
         <div class="content-grid">
 
-            <!-- LEFT CARD -->
             <section class="card about-card">
 
                 <h2>About Me</h2>
@@ -124,8 +128,6 @@
 
             </section>
 
-
-            <!-- RIGHT CARD -->
             <section class="card resources-card">
 
                 <h2>Web Dev Resources</h2>
@@ -134,48 +136,42 @@
 
                     <li>
                         <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                            target="_blank"
-                            rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer">
                             MDN HTML
                         </a>
                     </li>
 
                     <li>
                         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-                            target="_blank"
-                            rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer">
                             MDN CSS
                         </a>
                     </li>
 
                     <li>
                         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                            target="_blank"
-                            rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer">
                             MDN JavaScript
                         </a>
                     </li>
 
                     <li>
                         <a href="https://www.w3.org/"
-                            target="_blank"
-                            rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer">
                             W3C
                         </a>
                     </li>
 
                     <li>
                         <a href="https://www.w3schools.com/"
-                            target="_blank"
-                            rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer">
                             W3 Schools
                         </a>
                     </li>
 
                     <li>
                         <a href="https://css-tricks.com/"
-                            target="_blank"
-                            rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer">
                             CSS-Tricks
                         </a>
                     </li>
@@ -187,7 +183,6 @@
         </div>
 
     </main>
-
 
     <footer>
 
