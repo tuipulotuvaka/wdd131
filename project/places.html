@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places to Visit | Tonga Travel Guide</title>
+    <meta name="description" content="Discover interesting places to visit in Tonga, including Nuku'alofa, Ha'amonga 'a Maui, and beautiful island destinations.">
+    <meta name="author" content="Lea Mei Vaka Tu'ipulotu">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a class="logo" href="index.html">Tonga Travel Guide</a>
+
+            <button id="menu-button" class="menu-button" type="button" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+            <nav id="main-nav">
+                <a href="index.html">Home</a>
+                <a class="active" href="places.html">Places</a>
+                <a href="activities.html">Activities</a>
+                <a href="references.html">References</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div>
+                <p class="eyebrow">Explore Tonga</p>
+                <h1>Places to Visit</h1>
+                <p>Discover destinations with history, nature, and island beauty.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Choose a category</p>
+                <h2>Find your destination</h2>
+                <p>Use the buttons to filter the places shown below.</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-button active-filter" type="button" data-filter="all">
+                    All
+                </button>
+                <button class="filter-button" type="button" data-filter="culture">
+                    Culture
+                </button>
+                <button class="filter-button" type="button" data-filter="nature">
+                    Nature
+                </button>
+                <button class="filter-button" type="button" data-filter="history">
+                    History
+                </button>
+            </div>
+
+            <div id="places-container" class="place-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Tonga Travel Guide | Lea Mei Vaka Tu'ipulotu</p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>
