@@ -1,173 +1,137 @@
 <!DOCTYPE html>
+
 <html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tonga | WDD 131 - Dynamic Web Fundamentals - Lea Mei Vaka Tuipulotu</title>
 
-    <meta name="description"
-        content="Learn about Tonga, a beautiful island kingdom in the South Pacific, including its geography, culture, capital, and weather.">
+<meta name="description"
+    content="Temple Album featuring temples of The Church of Jesus Christ of Latter-day Saints.">
+<meta name="author" content="Lea Mei Vaka Tuipulotu">
 
-    <meta name="author" content="Lea Mei Vaka Tuipulotu">
+<title>Temple Album | Lea Mei Vaka Tuipulotu</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap"
-        rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/place.css">
+<link rel="stylesheet" href="styles/temples.css">
+<link rel="stylesheet" href="styles/temples-large.css">
 
-    <script src="scripts/place.js" defer></script>
+<script src="scripts/temples.js" defer></script>
+
+
 </head>
 
 <body>
 
-    <header>
-        <div class="header-container">
 
-            <div class="brand">
-                <div class="flag">✚</div>
-                <h1>Tonga</h1>
-            </div>
+<header>
+    <div class="header-content">
+        <span>Temple Album</span>
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="index.html">Rafting Website</a>
-            </nav>
+        <button id="menu-button"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+            ☰
+        </button>
+    </div>
 
-            <button type="button" class="menu-button" aria-label="Open navigation menu">
-                ☰
-            </button>
+    <nav id="navigation">
+        <a href="index.html">Home</a>
+        <a href="#old">Old</a>
+        <a href="#new">New</a>
+        <a href="#large">Large</a>
+        <a href="#small">Small</a>
+    </nav>
+</header>
 
-        </div>
-    </header>
+<main>
+    <h1>Temple Album</h1>
 
-    <main>
+    <section class="temple-grid">
 
-        <section class="hero">
+        <figure>
+            <img src="images/nukualofa.jpg"
+                alt="Nuku'alofa Tonga Temple"
+                loading="lazy">
+            <figcaption>Nuku'alofa Tonga Temple</figcaption>
+        </figure>
 
-            <picture>
-                <source
-                    media="(min-width: 700px)"
-                    srcset="images/tonga-large.webp">
+        <figure>
+            <img src="images/apia.jpg"
+                alt="Apia Samoa Temple"
+                loading="lazy">
+            <figcaption>Apia Samoa Temple</figcaption>
+        </figure>
 
-                <img
-                    src="images/tonga-small.webp"
-                    alt="Beautiful tropical coastline and clear blue water in Tonga">
-            </picture>
+        <figure>
+            <img src="images/suva.jpg"
+                alt="Suva Fiji Temple"
+                loading="lazy">
+            <figcaption>Suva Fiji Temple</figcaption>
+        </figure>
 
-            <div class="hero-text">
-                <p>Small Islands<br>Big Heart</p>
-                <span>TONGA</span>
-            </div>
+        <figure>
+            <img src="images/papeete.jpg"
+                alt="Papeete Tahiti Temple"
+                loading="lazy">
+            <figcaption>Papeete Tahiti Temple</figcaption>
+        </figure>
 
-        </section>
+        <figure>
+            <img src="images/hamilton.jpg"
+                alt="Hamilton New Zealand Temple"
+                loading="lazy">
+            <figcaption>Hamilton New Zealand Temple</figcaption>
+        </figure>
 
-        <div class="content">
+        <figure>
+            <img src="images/sydney.jpg"
+                alt="Sydney Australia Temple"
+                loading="lazy">
+            <figcaption>Sydney Australia Temple</figcaption>
+        </figure>
 
-            <section class="about card">
+        <figure>
+            <img src="images/brisbane.jpg"
+                alt="Brisbane Australia Temple"
+                loading="lazy">
+            <figcaption>Brisbane Australia Temple</figcaption>
+        </figure>
 
-                <h2>Tonga</h2>
+        <figure>
+            <img src="images/melbourne.jpg"
+                alt="Melbourne Australia Temple"
+                loading="lazy">
+            <figcaption>Melbourne Australia Temple</figcaption>
+        </figure>
 
-                <p>
-                    Tonga is a beautiful island kingdom in the South Pacific,
-                    known for its rich culture, friendly people, and stunning
-                    natural landscapes. It is made up of many islands and is
-                    famous for its royal heritage, traditional dance, and warm
-                    hospitality.
-                </p>
+        <figure>
+            <img src="images/adelaide.jpg"
+                alt="Adelaide Australia Temple"
+                loading="lazy">
+            <figcaption>Adelaide Australia Temple</figcaption>
+        </figure>
 
-            </section>
+    </section>
+</main>
 
-            <section class="data card">
+<footer>
+    <p>
+        &copy; <span id="currentyear"></span>
+        Lea Mei Vaka Tuipulotu | Tonga
+    </p>
 
-                <h2>Country Data</h2>
+    <p id="lastModified"></p>
+</footer>
 
-                <div class="data-list">
-
-                    <div class="data-row">
-                        <span class="data-icon" aria-hidden="true">📍</span>
-                        <strong>Area:</strong>
-                        <span>748 km²</span>
-                    </div>
-
-                    <div class="data-row">
-                        <span class="data-icon" aria-hidden="true">🏛️</span>
-                        <strong>Capital:</strong>
-                        <span>Nuku'alofa</span>
-                    </div>
-
-                    <div class="data-row">
-                        <span class="data-icon" aria-hidden="true">👥</span>
-                        <strong>Population:</strong>
-                        <span>106,444</span>
-                    </div>
-
-                    <div class="data-row">
-                        <span class="data-icon" aria-hidden="true">💬</span>
-                        <strong>Language:</strong>
-                        <span>Tongan &amp; English</span>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section class="weather card">
-
-                <h2>Weather</h2>
-
-                <div class="mobile-weather-icon">
-                    <img
-                        src="images/weather.svg"
-                        alt="Partly cloudy weather">
-                </div>
-
-                <div class="weather-list">
-
-                    <div class="weather-row">
-                        <span class="weather-symbol" aria-hidden="true">🌡️</span>
-                        <strong>Temperature:</strong>
-                        <span>9 °C</span>
-                    </div>
-
-                    <div class="weather-row">
-                        <span class="weather-symbol" aria-hidden="true">💨</span>
-                        <strong>Wind Speed:</strong>
-                        <span>12 km/h</span>
-                    </div>
-
-                    <div class="weather-row">
-                        <span class="weather-symbol" aria-hidden="true">❄️</span>
-                        <strong>Wind Chill:</strong>
-                        <span id="windchill">N/A</span>
-                    </div>
-
-                </div>
-
-            </section>
-
-        </div>
-
-    </main>
-
-    <footer>
-
-        <p>
-            &copy; <span id="currentyear"></span>
-            Lea Mei Vaka Tuipulotu
-        </p>
-
-        <p>
-            Last Modified:
-            <span id="lastModified"></span>
-        </p>
-
-    </footer>
 
 </body>
 
