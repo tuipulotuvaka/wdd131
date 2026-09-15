@@ -35,7 +35,7 @@ header h1 {
 }
 
 main {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -45,6 +45,7 @@ main {
 
 .hero picture {
     display: block;
+    width: 100%;
 }
 
 .hero img {
@@ -58,6 +59,8 @@ main {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
@@ -121,7 +124,11 @@ footer p {
     margin: 0.25rem;
 }
 
-/* Wider view */
+
+/* ========================================
+   WIDER VIEW
+   ======================================== */
+
 @media screen and (min-width: 601px) {
 
     header {
@@ -133,7 +140,7 @@ footer p {
     }
 
     .hero img {
-        max-height: 550px;
+        max-height: 600px;
         object-fit: cover;
     }
 
@@ -148,19 +155,23 @@ footer p {
         min-height: 350px;
     }
 
-    /* Hide the SVG on wider screens */
+    /* Hide the mobile weather SVG on wider screens */
     .weather-icon {
         display: none;
     }
 
-    /* Required pseudo-element emoticon */
+    /* Required W03 pseudo-element */
     .weather-card h2::after {
         content: " ⛅";
         margin-left: 0.5rem;
     }
 }
 
-/* Mobile view */
+
+/* ========================================
+   MOBILE VIEW
+   ======================================== */
+
 @media screen and (max-width: 600px) {
 
     .hero img {

@@ -1,21 +1,38 @@
-const currentYear = new Date().getFullYear();
+const today = new Date();
 
-document.querySelector("#currentyear").textContent = currentYear;
 
-document.querySelector("#lastModified").textContent = document.lastModified;
+// Footer
+document.getElementById("currentyear").textContent =
+    today.getFullYear();
 
+document.getElementById("lastModified").textContent =
+    document.lastModified;
+
+
+// Static weather values
 const temperature = 9;
 const windSpeed = 12;
 
+
+// Wind Chill Calculation
 function calculateWindChill(temp, wind) {
-    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16);
+    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) +
+        0.3965 * temp * Math.pow(wind, 0.16);
 }
 
-const windChillElement = document.querySelector("#windchill");
 
+// Display Wind Chill
 if (temperature <= 10 && windSpeed > 4.8) {
-    const windChill = calculateWindChill(temperature, windSpeed);
-    windChillElement.textContent = `${windChill.toFixed(1)} °C`;
+
+    const windChill = calculateWindChill(
+        temperature,
+        windSpeed
+    );
+
+    document.getElementById("windchill").textContent =
+        `${windChill.toFixed(1)} °C`;
+
 } else {
-    windChillElement.textContent = "N/A";
+
+    document.getElementById("windchill").textContent = "N/A";
 }
