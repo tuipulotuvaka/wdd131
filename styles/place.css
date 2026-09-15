@@ -1,12 +1,11 @@
 :root {
-    --red: #c8102e;
-    --blue: #004b76;
-    --light-blue: #e8f6ff;
-    --white: #ffffff;
-    --text: #073b66;
-    --border: #cbdfea;
-    --heading-font: "Roboto Slab", serif;
-    --body-font: "Roboto", sans-serif;
+    --primary-color: #c8102e;
+    --secondary-color: #ffffff;
+    --dark-color: #222222;
+    --light-color: #f4f4f4;
+    --card-color: #ffffff;
+    --border-color: #cccccc;
+    --shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 * {
@@ -15,341 +14,169 @@
 
 body {
     margin: 0;
-    font-family: var(--body-font);
-    color: var(--text);
-    background: #f5f5f5;
+    font-family: "Roboto", Arial, sans-serif;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    line-height: 1.5;
 }
 
 header {
-    background: var(--red);
-    color: var(--white);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 5px solid var(--dark-color);
 }
 
-.header-container {
-    max-width: 1160px;
-    height: 75px;
-    margin: auto;
-    padding: 0 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.brand h1 {
+header h1 {
     margin: 0;
-    font-family: var(--heading-font);
-    font-size: 2.3rem;
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: 2.2rem;
 }
 
-.flag {
-    width: 58px;
-    height: 40px;
-    border: 2px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
+main {
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
-nav {
-    display: flex;
-    gap: 35px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu-button {
-    display: none;
-    border: 0;
-    background: transparent;
-    color: white;
-    font-size: 2rem;
-}
-
-/* HERO */
 
 .hero {
-    max-width: 1160px;
-    margin: auto;
-    position: relative;
+    width: 100%;
+}
+
+.hero picture {
+    display: block;
 }
 
 .hero img {
     display: block;
     width: 100%;
-    height: 330px;
-    object-fit: cover;
+    height: auto;
 }
 
-.hero-text {
-    position: absolute;
-    top: 45px;
-    left: 45px;
-    color: white;
-    text-shadow: 2px 2px 5px #000;
-}
-
-.hero-text p {
-    margin: 0;
-    font-size: 3.2rem;
-    line-height: 1.05;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.hero-text span {
-    display: block;
-    margin-top: 15px;
-    padding-top: 8px;
-    border-top: 3px solid white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 5px;
-}
-
-/* CONTENT */
-
-.content {
-    max-width: 1160px;
-    margin: auto;
-    padding: 18px;
+.information {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 15px;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
 }
 
 .card {
-    background: white;
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
     overflow: hidden;
 }
 
-/* ABOUT */
-
-.about {
-    padding: 14px;
-}
-
-.about h2 {
-    margin: 0 0 5px;
-    font-family: var(--heading-font);
-    font-size: 2rem;
-}
-
-.about p {
+.card h2 {
     margin: 0;
-    line-height: 1.5;
-}
-
-/* DATA */
-
-.data h2 {
-    margin: 0;
-    padding: 6px 14px;
-    background: var(--blue);
-    color: white;
-    font-family: var(--heading-font);
-    font-size: 1.25rem;
-}
-
-.data-list {
-    padding: 7px 15px;
-}
-
-.data-row {
-    display: grid;
-    grid-template-columns: 35px 140px 1fr;
-    align-items: center;
-    padding: 5px 0;
-}
-
-.data-icon {
-    font-size: 1.3rem;
-}
-
-/* WEATHER */
-
-.weather {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    background: var(--light-blue);
-    padding: 15px;
-}
-
-.weather h2 {
-    margin: 0 0 20px;
-    font-family: var(--heading-font);
-    font-size: 1.8rem;
-}
-
-.weather h2::after {
-    content: " ⛅";
-}
-
-.mobile-weather-icon {
-    display: none;
-}
-
-.weather-row {
-    display: grid;
-    grid-template-columns: 40px 1fr;
-    margin-bottom: 22px;
-}
-
-.weather-symbol {
-    grid-row: span 2;
+    padding: 0.75rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: "Roboto Slab", Georgia, serif;
     font-size: 1.5rem;
+    text-align: center;
 }
 
-.weather-row span:last-child {
-    grid-column: 2;
+.card dl {
+    margin: 0;
+    padding: 1.25rem;
 }
 
-/* FOOTER */
+.card dl div {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+}
+
+.card dl div:last-child {
+    margin-bottom: 0;
+}
+
+.card dt {
+    font-weight: 700;
+    text-align: right;
+}
+
+.card dd {
+    margin: 0;
+}
+
+.weather-icon {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 1rem auto 0.25rem;
+}
 
 footer {
-    max-width: 1160px;
-    margin: auto;
-    padding: 12px;
+    background-color: var(--dark-color);
+    color: var(--secondary-color);
     text-align: center;
-    background: var(--blue);
-    color: white;
-    font-size: 0.85rem;
+    padding: 1rem;
 }
 
 footer p {
-    margin: 2px;
+    margin: 0.25rem;
 }
 
-/* MOBILE */
+/* Wider view */
+@media screen and (min-width: 601px) {
 
-@media screen and (max-width: 699px) {
-
-    .header-container {
-        height: 65px;
+    header {
+        padding: 1.25rem;
     }
 
-    .brand h1 {
-        font-size: 1.8rem;
-    }
-
-    .flag {
-        width: 50px;
-        height: 34px;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .menu-button {
-        display: block;
+    header h1 {
+        font-size: 2.8rem;
     }
 
     .hero img {
-        height: 190px;
+        max-height: 550px;
+        object-fit: cover;
     }
 
-    .hero-text {
-        top: 30px;
-        left: 20px;
+    .information {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        padding: 2rem;
+        gap: 2rem;
     }
 
-    .hero-text p {
-        font-size: 2rem;
+    .card {
+        min-height: 350px;
     }
 
-    .hero-text span {
-        font-size: 0.8rem;
+    /* Hide the SVG on wider screens */
+    .weather-icon {
+        display: none;
     }
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        padding: 8px;
-        gap: 8px;
+    /* Required pseudo-element emoticon */
+    .weather-card h2::after {
+        content: " ⛅";
+        margin-left: 0.5rem;
+    }
+}
+
+/* Mobile view */
+@media screen and (max-width: 600px) {
+
+    .hero img {
+        min-height: 250px;
+        object-fit: cover;
     }
 
-    .about {
-        padding: 10px;
+    .information {
+        padding: 1rem;
     }
 
-    .about h2 {
-        font-size: 1.7rem;
+    .card dl div {
+        grid-template-columns: 120px 1fr;
     }
 
-    .about p {
-        font-size: 0.9rem;
-    }
-
-    .data h2 {
-        font-size: 1.15rem;
-    }
-
-    .data-list {
-        padding: 5px 10px;
-    }
-
-    .data-row {
-        grid-template-columns: 35px 105px 1fr;
-        padding: 4px 0;
-        font-size: 0.85rem;
-    }
-
-    .weather {
-        padding: 10px;
-    }
-
-    .weather h2 {
-        text-align: center;
-        font-size: 1.6rem;
-        margin-bottom: 5px;
-    }
-
-    /* SVG appears on mobile */
-    .mobile-weather-icon {
+    .weather-icon {
         display: block;
-        width: 65px;
-        margin: 0 auto 5px;
-    }
-
-    .mobile-weather-icon img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Remove desktop emoticon */
-    .weather h2::after {
-        content: "";
-    }
-
-    .weather-row {
-        grid-template-columns: 35px 1fr 1fr;
-        margin-bottom: 10px;
-        font-size: 0.85rem;
-    }
-
-    .weather-row span:last-child {
-        grid-column: 3;
-    }
-
-    .weather-symbol {
-        grid-row: auto;
-    }
-
-    footer {
-        font-size: 0.75rem;
-        padding: 8px;
     }
 }

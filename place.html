@@ -1,138 +1,145 @@
 <!DOCTYPE html>
-
-<html lang="en-US">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="Discover Tonga, a beautiful island kingdom in the South Pacific, including its data, culture, geography, and weather.">
+    <meta name="author" content="Lea Mei Vaka Tuipulotu">
 
-<meta name="description"
-    content="Temple Album featuring temples of The Church of Jesus Christ of Latter-day Saints.">
-<meta name="author" content="Lea Mei Vaka Tuipulotu">
+    <title>Tonga | WDD 131 - Dynamic Web Fundamentals - Lea Mei Vaka Tuipulotu</title>
 
-<title>Temple Album | Lea Mei Vaka Tuipulotu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
-<link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet">
-
-<link rel="stylesheet" href="styles/temples.css">
-<link rel="stylesheet" href="styles/temples-large.css">
-
-<script src="scripts/temples.js" defer></script>
-
-
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
 
+    <header>
+        <h1>Tonga</h1>
+    </header>
 
-<header>
-    <div class="header-content">
-        <span>Temple Album</span>
+    <main>
 
-        <button id="menu-button"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false">
-            ☰
-        </button>
-    </div>
+        <section class="hero">
+            <picture>
+                <source
+                    media="(max-width: 600px)"
+                    srcset="images/tonga-small.webp">
 
-    <nav id="navigation">
-        <a href="index.html">Home</a>
-        <a href="#old">Old</a>
-        <a href="#new">New</a>
-        <a href="#large">Large</a>
-        <a href="#small">Small</a>
-    </nav>
-</header>
+                <source
+                    media="(min-width: 601px)"
+                    srcset="images/tonga-large.webp">
 
-<main>
-    <h1>Temple Album</h1>
+                <img
+                    src="images/tonga-large.webp"
+                    alt="Beautiful tropical coastline in Tonga"
+                    width="1200"
+                    height="600">
+            </picture>
+        </section>
 
-    <section class="temple-grid">
+        <section class="information">
 
-        <figure>
-            <img src="images/nukualofa.jpg"
-                alt="Nuku'alofa Tonga Temple"
-                loading="lazy">
-            <figcaption>Nuku'alofa Tonga Temple</figcaption>
-        </figure>
+            <article class="card data-card">
+                <h2>Data</h2>
 
-        <figure>
-            <img src="images/apia.jpg"
-                alt="Apia Samoa Temple"
-                loading="lazy">
-            <figcaption>Apia Samoa Temple</figcaption>
-        </figure>
+                <dl>
+                    <div>
+                        <dt>Area:</dt>
+                        <dd>747 km²</dd>
+                    </div>
 
-        <figure>
-            <img src="images/suva.jpg"
-                alt="Suva Fiji Temple"
-                loading="lazy">
-            <figcaption>Suva Fiji Temple</figcaption>
-        </figure>
+                    <div>
+                        <dt>Population:</dt>
+                        <dd>About 100,000</dd>
+                    </div>
 
-        <figure>
-            <img src="images/papeete.jpg"
-                alt="Papeete Tahiti Temple"
-                loading="lazy">
-            <figcaption>Papeete Tahiti Temple</figcaption>
-        </figure>
+                    <div>
+                        <dt>Capital:</dt>
+                        <dd>Nuku'alofa</dd>
+                    </div>
 
-        <figure>
-            <img src="images/hamilton.jpg"
-                alt="Hamilton New Zealand Temple"
-                loading="lazy">
-            <figcaption>Hamilton New Zealand Temple</figcaption>
-        </figure>
+                    <div>
+                        <dt>Languages:</dt>
+                        <dd>Tongan and English</dd>
+                    </div>
 
-        <figure>
-            <img src="images/sydney.jpg"
-                alt="Sydney Australia Temple"
-                loading="lazy">
-            <figcaption>Sydney Australia Temple</figcaption>
-        </figure>
+                    <div>
+                        <dt>Currency:</dt>
+                        <dd>Tongan paʻanga (TOP)</dd>
+                    </div>
 
-        <figure>
-            <img src="images/brisbane.jpg"
-                alt="Brisbane Australia Temple"
-                loading="lazy">
-            <figcaption>Brisbane Australia Temple</figcaption>
-        </figure>
+                    <div>
+                        <dt>Time Zone:</dt>
+                        <dd>UTC+13</dd>
+                    </div>
 
-        <figure>
-            <img src="images/melbourne.jpg"
-                alt="Melbourne Australia Temple"
-                loading="lazy">
-            <figcaption>Melbourne Australia Temple</figcaption>
-        </figure>
+                    <div>
+                        <dt>Calling Code:</dt>
+                        <dd>+676</dd>
+                    </div>
 
-        <figure>
-            <img src="images/adelaide.jpg"
-                alt="Adelaide Australia Temple"
-                loading="lazy">
-            <figcaption>Adelaide Australia Temple</figcaption>
-        </figure>
+                    <div>
+                        <dt>Internet TLD:</dt>
+                        <dd>.to</dd>
+                    </div>
+                </dl>
+            </article>
 
-    </section>
-</main>
+            <article class="card weather-card">
+                <h2>Weather</h2>
 
-<footer>
-    <p>
-        &copy; <span id="currentyear"></span>
-        Lea Mei Vaka Tuipulotu | Tonga
-    </p>
+                <img
+                    class="weather-icon"
+                    src="images/weather.svg"
+                    alt="Partly cloudy weather"
+                    width="80"
+                    height="80">
 
-    <p id="lastModified"></p>
-</footer>
+                <dl>
+                    <div>
+                        <dt>Temperature:</dt>
+                        <dd>9 °C</dd>
+                    </div>
 
+                    <div>
+                        <dt>Conditions:</dt>
+                        <dd>Partly Cloudy</dd>
+                    </div>
+
+                    <div>
+                        <dt>Wind:</dt>
+                        <dd>12 km/h</dd>
+                    </div>
+
+                    <div>
+                        <dt>Wind Chill:</dt>
+                        <dd><span id="windchill">N/A</span></dd>
+                    </div>
+                </dl>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Lea Mei Vaka Tuipulotu | Tonga
+        </p>
+
+        <p>
+            Last Modified:
+            <span id="lastModified"></span>
+        </p>
+    </footer>
 
 </body>
-
 </html>

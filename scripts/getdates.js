@@ -3,21 +3,27 @@ const today = new Date();
 document.getElementById("currentyear").textContent = today.getFullYear();
 
 document.getElementById("lastModified").textContent =
-    `Last Modification: ${document.lastModified}`;
+    document.lastModified;
 
-// Hamburger menu
-const menuButton = document.getElementById("menu-button");
-const mainNav = document.getElementById("main-nav");
 
-menuButton.addEventListener("click", () => {
-    const isOpen = mainNav.classList.toggle("open");
+// Static weather values
+const temperature = 9;
+const windSpeed = 12;
 
-    menuButton.setAttribute("aria-expanded", isOpen);
 
-    menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-    );
+// Wind chill calculation
+function calculateWindChill(temp, wind) {
+    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) +
+        0.3965 * temp * Math.pow(wind, 0.16);
+}
 
-    menuButton.textContent = isOpen ? "✕" : "☰";
-});
+
+// Display wind chill when conditions are met
+if (temperature <= 10 && windSpeed > 4.8) {
+    const windChill = calculateWindChill(temperature, windSpeed);
+
+    document.getElementById("wind-chill").textContent =
+        `${windChill.toFixed(1)} °C`;
+} else {
+    document.getElementById("wind-chill").textContent = "N/A";
+}
